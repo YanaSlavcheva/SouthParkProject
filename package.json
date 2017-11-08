@@ -6,5 +6,9 @@
     "author": {
         "name": "Yana Slavcheva",
         "email": "yana.slavcheva@gmail.com"
+    },
+    "dependencies": {
+        "eslint": "^4.10.0",
+        "tslint": "^5.8.0"
     }
 }
