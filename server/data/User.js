@@ -17,5 +17,33 @@ let userSchema = mongoose.Schema({
     isDeleted: { type: Boolean, default: false },
     isActive: { type: Boolean, default: true },
     salt: String,
-    hashedPass: String
+    hashedPass: { type: String, required: requiredValidationMessage },
+    roles: [String]
 })
+
+userSchema.method({
+    authenticate: function(password) {
+        let inputHashedPassword = encryption.generateHashedPassword(this.salt, password)
+        return inputHashedPassword === this.hashedPass ? true : false
+    }
+})
+
+let User = mongoose.model('User', userSchema)
+
+module.exports.seedAdminUser = () => {
+    User.find().then(users => {
+        if (users.length === 0) {
+            let salt = encryption.generateSalt()
+            let hashedPass = encryption.generateHashedPassword(salt, 'Admin123')
+
+            User.create({
+                username: 'Admin',
+                firstName: 'Ivan',
+                lastName: 'Petrov',
+                salt: salt,
+                hashedPass: hashedPass,
+                roles: ['Admin']
+            })
+        }
+    })
+}
