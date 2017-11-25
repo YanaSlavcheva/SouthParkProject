@@ -32,7 +32,7 @@ let User = mongoose.model('User', userSchema)
 
 module.exports.seedAdminUser = () => {
     User.find().then(users => {
-        if (users.length === 0) {
+        if (!users.length) {
             let salt = encryption.generateSalt()
             let hashedPass = encryption.generateHashedPassword(salt, 'Admin123')
 
@@ -47,3 +47,5 @@ module.exports.seedAdminUser = () => {
         }
     })
 }
+
+module.exports = mongoose.model('User', userSchema)
