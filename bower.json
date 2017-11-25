@@ -1,0 +1,19 @@
+{
+  "name": "SouthParkProject",
+  "description": "A web application that is promoting Sofia'a lovely South Park and the activities that take place in it.",
+  "main": "server.js",
+  "authors": [
+    "Yana Slavcheva"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/YanaSlavcheva/SouthParkProject",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ]
+}
