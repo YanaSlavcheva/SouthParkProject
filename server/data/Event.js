@@ -19,12 +19,12 @@ let eventSchema = mongoose.Schema({
 })
 
 let Event = mongoose.model('Event', eventSchema)
-let User = require('./user') 
+let UserModel = require('mongoose').model('User');
 
 module.exports.seedTestEvent = () => {
     Event.find().then(events => {
         if (events.length === 0) { 
-            User.find({ username: 'Admin' }).then(adminUser => {
+            UserModel.find({ username: 'Admin' }).then(adminUser => {
                 let authorId
                 if (adminUser.length) {
                     authorId = adminUser[0]._id
