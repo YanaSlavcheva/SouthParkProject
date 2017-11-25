@@ -6,7 +6,7 @@ module.exports = {
     development: {
         rootPath: rootPath,
         db: 'mongodb://localhost:27017/south-park-project',
-        port: 1338
+        port: 1339
     },
     production: {
         rootPath: rootPath,
