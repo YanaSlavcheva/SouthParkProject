@@ -19,7 +19,7 @@ let eventSchema = mongoose.Schema({
 })
 
 let Event = mongoose.model('Event', eventSchema)
-let UserModel = require('mongoose').model('User');
+let UserModel = require('mongoose').model('User')
 
 module.exports.seedTestEvent = () => {
     Event.find().then(events => {
