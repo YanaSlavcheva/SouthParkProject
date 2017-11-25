@@ -4,9 +4,14 @@ const router = express.Router()
 const axios = require('axios')
 const api = 'https://jsonplaceholder.typicode.com'
 
-router.get('/', (req, res, err) => {
+router.get('/users', (req, res, err) => {
     if (err) console.log(err)
-    res.send('api works')
+    res.send('get users page')
+})
+
+router.get('/events', (req, res, err) => {
+    if (err) console.log(err)
+    res.send('get events page')
 })
 
 router.post('/posts', (req, res, err) => {
