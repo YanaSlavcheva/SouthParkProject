@@ -25,6 +25,8 @@ module.exports = (config, app) => {
         next()
     })
     app.use(express.static(config.rootPath + 'public'))
+    app.use(express.static(config.rootPath + 'src'))
+    app.use(express.static(config.rootPath + 'node_modules'))
     app.use('/api', api)
     app.get('/', (req, res) => {
         res.sendFile(path.join(config.rootPath + 'server/views/index.html'))
