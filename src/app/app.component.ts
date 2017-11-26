@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  template: `<p>Loaded from the right place</p>`,
 })
 
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { }
