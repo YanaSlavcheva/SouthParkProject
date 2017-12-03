@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { EventsService } from '../../services/events.service'
+import { Events } from '../../../viewModels/Event'
 
 @Component({
     moduleId: module.id,
@@ -8,10 +9,12 @@ import { EventsService } from '../../services/events.service'
 })
 
 export class EventsComponent {
-    constructor(private eventsService: EventsService){
+    public events: Events[]
+
+    constructor(private eventsService: EventsService) {
         this.eventsService.getAllEvents()
             .subscribe(events => {
-                console.log(events)
+                this.events = events
             })
     }
 }
