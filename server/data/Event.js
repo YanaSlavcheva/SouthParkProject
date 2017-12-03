@@ -42,6 +42,16 @@ module.exports.seedTestEvent = () => {
                     price: 0,
                     author: authorId
                 })
+                
+                Event.create({
+                    name: 'Wosh MC concert',
+                    startDate: new Date(2017, 12, 25, 09, 00),
+                    endDate: new Date(2017, 12, 25, 11, 00),
+                    description: 'Music event',
+                    website: 'http://woshmc.bg/',
+                    price: 0,
+                    author: authorId
+                })
             })
         }
     })
