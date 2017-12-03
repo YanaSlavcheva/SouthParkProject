@@ -1,5 +1,10 @@
-h1 {
-  color: #369;
+body {
+  color: #666;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  font-size: 18px;
+}
+
+.events-list {
+  font-size: 0.5em;
+  margin-bottom: 2em;
 }

@@ -1,16 +1,14 @@
-<article>
-    <div *ngFor="let event of events">
-        <div class="row">
-            <div class="col-md-6">Name: {{event.name}}</div>
-            <div class="col-md-6">Description: {{event.description}}</div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">Start: {{event.startDate}}</div>
-            <div class="col-md-6">End: {{event.endDate}}</div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">Website: {{event.website}}</div>
-            <div class="col-md-6">Price: {{event.price}}</div>
-        </div>
-    </div>   
-</article>
+<div *ngFor="let event of events" class="events-list">
+    <div class="row">
+        <div class="col-md-6 col-xs-12">Name: {{event.name}}</div>
+        <div class="col-md-6 col-xs-12">Description: {{event.description}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-12">Start: {{event.startDate}}</div>
+        <div class="col-md-6 col-xs-12">End: {{event.endDate}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-12">Website: {{event.website}}</div>
+        <div class="col-md-6 col-xs-12">Price: {{event.price}}</div>
+    </div>
+</div>
